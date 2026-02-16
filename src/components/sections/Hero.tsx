@@ -10,7 +10,6 @@ export function Hero() {
                     loop
                     muted
                     playsInline
-                    poster="/images/hero.png" // Fallback image only if video fails
                     className="object-cover object-center w-full h-full"
                 >
                     <source src="/videos/hero.mp4" type="video/mp4" />
