@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import prisma from '@/lib/prisma'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function GET(request: NextRequest) {
     // In real app, verify admin session cookie here or via middleware
 
@@ -14,7 +15,7 @@ export async function GET(request: NextRequest) {
         })
 
         return NextResponse.json({ bookings })
-    } catch (error) {
+    } catch {
         return NextResponse.json({ error: 'Internal Error' }, { status: 500 })
     }
 }

@@ -44,7 +44,7 @@ export function Testimonials() {
                                     <Star key={i} size={16} fill="currentColor" />
                                 ))}
                             </div>
-                            <p className="text-gray-300 mb-6 leading-relaxed italic">"{review.text}"</p>
+                            <p className="text-gray-300 mb-6 leading-relaxed italic">&ldquo;{review.text}&rdquo;</p>
                             <div className="flex items-center justify-between border-t border-white/5 pt-4">
                                 <span className="font-bold text-white">{review.name}</span>
                                 <span className="text-sm text-gray-500">{review.date}</span>

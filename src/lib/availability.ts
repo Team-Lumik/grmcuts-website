@@ -1,8 +1,8 @@
-import { PrismaClient } from '@prisma/client'
-import { addMinutes, format, isBefore, isEqual, parse, setHours, setMinutes, startOfDay } from 'date-fns'
+import { addMinutes, format, isBefore, isEqual, parse, setHours, setMinutes } from 'date-fns'
 
 const SHOP_OPEN = 9 // 9 AM
 const SHOP_CLOSE = 19 // 7 PM
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const BUFFER_MINUTES = 10
 
 // Generate all possible slots for the day based on open hours and service duration

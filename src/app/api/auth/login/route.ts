@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
         }
 
         return NextResponse.json({ error: 'Invalid password' }, { status: 401 })
-    } catch (error) {
+    } catch {
         return NextResponse.json({ error: 'Internal Error' }, { status: 500 })
     }
 }

@@ -4,6 +4,21 @@ import prisma from '@/lib/prisma'
 import styles from './page.module.css'
 import { format } from 'date-fns'
 import Link from 'next/link'
+interface BookingWithRelations {
+    id: string
+    customerName: string
+    customerEmail: string
+    customerPhone: string
+    date: Date
+    serviceId: string
+    service: { id: string; name: string; price: number; duration: number }
+    barberId: string | null
+    barber: { id: string; name: string } | null
+    status: string
+    notes: string | null
+    createdAt: Date
+    updatedAt: Date
+}
 
 export default async function AdminDashboard() {
     const cookieStore = await cookies()
@@ -36,10 +51,10 @@ export default async function AdminDashboard() {
                     <p className={styles.statValue}>{bookings.length}</p>
                 </div>
                 <div className={styles.statCard}>
-                    <h3>Today's Appts</h3>
+                    <h3>Today&apos;s Appts</h3>
                     {/* Placeholder calculation */}
                     <p className={styles.statValue}>
-                        {bookings.filter(b => format(b.date, 'yyyy-MM-dd') === format(new Date(), 'yyyy-MM-dd')).length}
+                        {bookings.filter((b: BookingWithRelations) => format(b.date, 'yyyy-MM-dd') === format(new Date(), 'yyyy-MM-dd')).length}
                     </p>
                 </div>
             </div>
@@ -58,7 +73,7 @@ export default async function AdminDashboard() {
                             </tr>
                         </thead>
                         <tbody>
-                            {bookings.map(booking => (
+                            {bookings.map((booking: BookingWithRelations) => (
                                 <tr key={booking.id}>
                                     <td>{format(booking.date, 'MMM d, yyyy')}</td>
                                     <td>{format(booking.date, 'h:mm a')}</td>

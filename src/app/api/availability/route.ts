@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import prisma from '@/lib/prisma'
 import { generateTimeSlots } from '@/lib/availability'
-import { addMinutes, parse, format, isWithinInterval } from 'date-fns'
+import { addMinutes, parse } from 'date-fns'
 
 export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams
@@ -35,7 +35,7 @@ export async function GET(request: NextRequest) {
 
         // Let's fetch all barbers first
         const barbers = await prisma.barber.findMany()
-        const targetBarberIds = barberId ? [barberId] : barbers.map(b => b.id)
+        const targetBarberIds = barberId ? [barberId] : barbers.map((b: { id: string }) => b.id)
 
         // Fetch bookings for the day
         const dayStart = new Date(`${dateStr}T00:00:00`)
@@ -58,11 +58,11 @@ export async function GET(request: NextRequest) {
             const slotEnd = addMinutes(slotStart, duration)
 
             // We need to find AT LEAST ONE barber who is free during this slot
-            const freeBarber = targetBarberIds.find(bId => {
+            const freeBarber = targetBarberIds.find((bId: string) => {
                 // Check if this barber has a conflict
-                const barberBookings = existingBookings.filter(b => b.barberId === bId || (!b.barberId)) // If booking has no barber assigned (unlikely but possible), assume it blocks everyone? No, should be assigned.
+                const barberBookings = existingBookings.filter((b: { barberId: string | null }) => b.barberId === bId || (!b.barberId)) // If booking has no barber assigned (unlikely but possible), assume it blocks everyone? No, should be assigned.
 
-                const hasConflict = barberBookings.some(booking => {
+                const hasConflict = barberBookings.some((booking: { date: Date; service: { duration: number } }) => {
                     // Buffer time logic: 
                     // Effective booking range = [start, end + 10 mins buffer]
                     // New booking range = [start, end + 10 mins buffer]

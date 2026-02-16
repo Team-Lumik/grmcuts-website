@@ -3,6 +3,14 @@ import Link from 'next/link'
 import styles from './page.module.css'
 import { Check } from 'lucide-react'
 
+interface ServiceItem {
+    id: string
+    name: string
+    price: number
+    duration: number
+    description: string | null
+}
+
 // Fallback data if DB is empty (since seeding failed)
 const FALLBACK_SERVICES = [
     { id: '1', name: 'Fade', price: 35.00, duration: 45, description: 'Clean fade (low, mid, high) with lineup.' },
@@ -13,7 +21,7 @@ const FALLBACK_SERVICES = [
     { id: '6', name: 'Kids Cut', price: 25.00, duration: 30, description: 'For styling young gents under 12.' },
 ]
 
-async function getServices() {
+async function getServices(): Promise<ServiceItem[]> {
     try {
         const services = await prisma.service.findMany()
         return services.length > 0 ? services : FALLBACK_SERVICES
