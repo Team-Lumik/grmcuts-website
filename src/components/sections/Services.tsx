@@ -1,10 +1,8 @@
 export function Services() {
     const services = [
-        { name: "Haircut", price: "$40+", duration: "45min" },
-        { name: "Haircut + Beard", price: "$55+", duration: "1h" },
-        { name: "Beard Trim", price: "$25+", duration: "30min" },
-        { name: "Line Up", price: "$20+", duration: "15min" },
-        { name: "Kids Cut", price: "$30+", duration: "30min" },
+        { name: "Any Haircut", price: "$25.00", duration: "45min" },
+        { name: "Any Haircut/Beard", price: "$30.00", duration: "50min" },
+        { name: "Shape Up", price: "$20.00", duration: "20min" },
     ]
 
     return (
