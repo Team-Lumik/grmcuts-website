@@ -23,11 +23,11 @@ export function Location() {
                                     <MapPin size={16} className="text-primary" /> Address
                                 </h3>
                                 <p className="text-gray-400 leading-relaxed">
-                                    9424 Church St<br />
+                                    9242 Church St<br />
                                     Manassas, VA 20110
                                 </p>
                                 <a
-                                    href="https://maps.google.com/?q=9424+Church+St,+Manassas,+VA"
+                                    href="https://maps.google.com/?q=9242+Church+St,+Manassas,+VA"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-white text-xs font-bold uppercase tracking-widest mt-4 inline-block border-b border-white hover:text-gray-300 hover:border-gray-300 transition-colors pb-0.5"
@@ -52,7 +52,7 @@ export function Location() {
                     <div className="relative">
                         <div className="aspect-square w-full bg-secondary grayscale hover:grayscale-0 transition-all duration-700">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3108.277397753644!2d-77.47775968465493!3d38.751388979592755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b65b6a71500001%3A0xe7a5c5f877777777!2s9424%20Church%20St%2C%20Manassas%2C%20VA%2020110!5e0!3m2!1sen!2sus!4v1676661234567!5m2!1sen!2sus"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3108.277397753644!2d-77.47775968465493!3d38.751388979592755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b65b6a71500001%3A0xe7a5c5f877777777!2s9242%20Church%20St%2C%20Manassas%2C%20VA%2020110!5e0!3m2!1sen!2sus!4v1676661234567!5m2!1sen!2sus"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}

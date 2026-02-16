@@ -61,7 +61,7 @@ export function Footer() {
                                 <MapPin size={20} className="text-primary shrink-0 mt-1" />
                                 <div>
                                     <p className="text-white font-medium">Inside JazCutz</p>
-                                    <p>9424 Church St</p>
+                                    <p>9242 Church St</p>
                                     <p>Manassas, VA 20110</p>
                                 </div>
                             </div>
