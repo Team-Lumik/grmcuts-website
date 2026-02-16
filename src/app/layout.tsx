@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "GrmCutz | Premium Barber in Manassas, VA",
+  title: "GrmCutz | Luxury Barbering Studio",
   description: "Book your next haircut with GrmCutz. Expert fades, tapers, and grooming inside JazCutz, Manassas. Sharp cuts, chill atmosphere.",
   keywords: ["Manassas Barber", "DMV Barber", "Barber Shop Manassas", "GrmCutz", "Fades", "Tapers", "Mens Grooming"],
   openGraph: {
