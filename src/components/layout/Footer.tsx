@@ -68,9 +68,16 @@ export function Footer() {
                             <div className="mt-4 p-4 bg-white/5 rounded-lg border border-white/10">
                                 <p className="text-sm text-gray-300">
                                     <span className="block font-bold text-white mb-1">Hours</span>
-                                    Tue - Sat: By Appointment<br />
+                                    Tue - Fri: 3:30pm - 7pm<br />
+                                    Sat: 9am - 4:30pm<br />
                                     Sun - Mon: Closed
                                 </p>
+                                <div className="mt-3 pt-3 border-t border-white/5">
+                                    <p className="text-[10px] uppercase tracking-widest text-primary font-bold mb-1">After Hour Cuts</p>
+                                    <p className="text-[11px] text-gray-400">
+                                        Text 571-564-4461 or DM on Instagram
+                                    </p>
+                                </div>
                             </div>
                         </address>
                     </div>
