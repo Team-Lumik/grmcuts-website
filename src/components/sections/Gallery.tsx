@@ -6,23 +6,23 @@ import Image from 'next/image'
 export function Gallery() {
     const [filter, setFilter] = useState('All')
 
-    // Using the 8 uploaded gallery images
+    // Using the 8 uploaded gallery images with multiple tags
     const cuts = [
-        { id: 1, category: 'Fades', image: '/images/gallery-1.jpg' },
-        { id: 2, category: 'Tapers', image: '/images/gallery-2.jpg' },
-        { id: 3, category: 'Beards', image: '/images/gallery-3.jpg' },
-        { id: 4, category: 'Designs', image: '/images/gallery-4.jpg' },
-        { id: 5, category: 'Fades', image: '/images/gallery-5.jpg' },
-        { id: 6, category: 'Tapers', image: '/images/gallery-6.jpg' },
-        { id: 7, category: 'Beards', image: '/images/gallery-7.jpg' },
-        { id: 8, category: 'Designs', image: '/images/gallery-8.jpg' },
+        { id: 1, categories: ['Fades'], image: '/images/gallery-1.jpg' },
+        { id: 2, categories: ['Tapers', 'Beards'], image: '/images/gallery-2.jpg' },
+        { id: 3, categories: ['Beards'], image: '/images/gallery-3.jpg' },
+        { id: 4, categories: ['Designs'], image: '/images/gallery-4.jpg' },
+        { id: 5, categories: ['Fades', 'Beards'], image: '/images/gallery-5.jpg' },
+        { id: 6, categories: ['Tapers'], image: '/images/gallery-6.jpg' },
+        { id: 7, categories: ['Beards'], image: '/images/gallery-7.jpg' },
+        { id: 8, categories: ['Designs', 'Fades'], image: '/images/gallery-8.jpg' },
     ]
 
     const categories = ['All', 'Fades', 'Tapers', 'Beards', 'Designs']
 
     const visibleCuts = filter === 'All'
         ? cuts
-        : cuts.filter(cut => cut.category === filter)
+        : cuts.filter(cut => cut.categories.includes(filter))
 
     return (
         <section id="gallery" className="section-padding bg-background relative z-10 border-t border-white/5">
@@ -57,31 +57,25 @@ export function Gallery() {
                         >
                             <Image
                                 src={cut.image}
-                                alt={`${cut.category} by GrmCutz`}
+                                alt={`Barber work by GrmCutz`}
                                 fill
                                 className="object-cover transition-transform duration-1000 group-hover:scale-105 opacity-90 group-hover:opacity-100"
                                 sizes="(max-width: 768px) 100vw, 33vw"
                             />
-                            {/* Minimal Overlay */}
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
-
-                            <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <span className="text-xs font-bold uppercase tracking-widest text-white drop-shadow-md">
-                                    {cut.category}
-                                </span>
-                            </div>
+                            {/* Subtle Darken Overlay on Hover (No Text) */}
+                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
                         </div>
                     ))}
                 </div>
 
-                <div className="text-center mt-24">
+                <div className="text-center mt-20">
                     <a
                         href="https://www.instagram.com/grmcutz/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-white transition-colors border-b border-transparent hover:border-white pb-1"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black text-sm uppercase tracking-widest font-bold hover:bg-zinc-200 transition-all duration-300"
                     >
-                        View More on Instagram
+                        See more on Instagram
                     </a>
                 </div>
             </div>
