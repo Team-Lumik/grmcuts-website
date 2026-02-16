@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model AdminUser {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+}
+
+model Barber {
+  id        String    @id @default(uuid())
+  name      String
+  bio       String?
+  image     String?
+  bookings  Booking[]
+  createdAt DateTime  @default(now())
+}
+
+model Service {
+  id          String    @id @default(uuid())
+  name        String
+  price       Float
+  duration    Int       // in minutes
+  description String?
+  bookings    Booking[]
+  createdAt   DateTime  @default(now())
+}
+
+model Booking {
+  id            String   @id @default(uuid())
+  customerName  String
+  customerEmail String
+  customerPhone String
+  date          DateTime
+  
+  serviceId     String
+  service       Service  @relation(fields: [serviceId], references: [id])
+  
+  barberId      String?
+  barber        Barber?  @relation(fields: [barberId], references: [id])
+  
+  status        String   @default("PENDING") // PENDING, CONFIRMED, CANCELLED, COMPLETED
+  notes         String?
+  
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}

@@ -1,0 +1,113 @@
+.header {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+
+.homeBtn {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.statsRow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.statCard {
+    background-color: var(--secondary);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.statCard h3 {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    margin-bottom: 0.5rem;
+}
+
+.statValue {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--foreground);
+}
+
+.section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--foreground);
+}
+
+.tableWrapper {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 600px;
+}
+
+.table th {
+    background-color: var(--secondary);
+    padding: 1rem;
+    font-weight: 600;
+    color: var(--muted-foreground);
+    font-size: 0.875rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--foreground);
+    font-size: 0.9rem;
+}
+
+.customerInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.email {
+    font-size: 0.8rem;
+    color: var(--muted-foreground);
+}
+
+.status {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status.confirmed {
+    background-color: rgba(0, 255, 0, 0.1);
+    color: #4ade80;
+}
+
+.status.pending {
+    background-color: rgba(255, 255, 0, 0.1);
+    color: #facc15;
+}
+
+.status.cancelled {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #f87171;
+}
+
+.empty {
+    text-align: center;
+    padding: 3rem;
+    color: var(--muted-foreground);
+}

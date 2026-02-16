@@ -1,0 +1,51 @@
+.header {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--foreground);
+}
+
+.subtitle {
+    color: var(--muted-foreground);
+    font-size: 1.125rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-bottom: 6rem;
+}
+
+@media (min-width: 640px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.imageWrapper {
+    position: relative;
+    aspect-ratio: 4/5;
+    background-color: var(--secondary);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.image {
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.imageWrapper:hover .image {
+    transform: scale(1.05);
+}

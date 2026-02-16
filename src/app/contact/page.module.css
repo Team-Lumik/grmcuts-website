@@ -1,0 +1,156 @@
+.header {
+    padding: 4rem 0 2rem;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--foreground);
+}
+
+.subtitle {
+    color: var(--muted-foreground);
+    font-size: 1.125rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-bottom: 6rem;
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+}
+
+.card {
+    background-color: var(--secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--foreground);
+}
+
+.infoItem {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.icon {
+    color: var(--primary);
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+}
+
+.infoItem h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+    color: var(--foreground);
+}
+
+.infoItem p {
+    color: var(--muted-foreground);
+    line-height: 1.5;
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.socialLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    color: var(--foreground);
+    transition: all 0.2s;
+}
+
+.socialLink:hover {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+}
+
+.mapCard {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    height: 300px;
+}
+
+.mapPlaceholder {
+    width: 100%;
+    height: 100%;
+    background-color: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted-foreground);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formGroup label {
+    font-weight: 500;
+    color: var(--foreground);
+}
+
+.formGroup input,
+.formGroup textarea {
+    background-color: var(--input);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.75rem;
+    color: var(--foreground);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: var(--ring);
+}
+
+.submitBtn {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    border: none;
+    padding: 1rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.submitBtn:hover {
+    opacity: 0.9;
+}

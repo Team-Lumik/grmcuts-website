@@ -1,0 +1,121 @@
+.header {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--foreground);
+}
+
+.subtitle {
+    color: var(--muted-foreground);
+    font-size: 1.125rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-bottom: 6rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    background-color: var(--secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s;
+}
+
+.card:hover {
+    border-color: var(--primary);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    color: var(--foreground);
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.description {
+    color: var(--muted-foreground);
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.meta {
+    margin-bottom: 2rem;
+}
+
+.duration {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    color: var(--foreground);
+    margin-bottom: 1rem;
+}
+
+.features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.features li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--muted-foreground);
+    font-size: 0.9rem;
+}
+
+.check {
+    color: var(--primary);
+}
+
+.button {
+    display: block;
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    padding: 0.75rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
