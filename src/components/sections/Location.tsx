@@ -48,7 +48,7 @@ export function Location() {
                                 <div className="mt-6 pt-6 border-t border-white/5 max-w-[200px]">
                                     <p className="text-[10px] uppercase tracking-widest text-primary font-bold mb-2">After Hour Cuts</p>
                                     <p className="text-xs text-gray-400 leading-relaxed">
-                                        Text <span className="text-white font-medium">571-564-4461</span><br />
+                                        Text <span className="text-white font-medium">(571)-564-4461</span><br />
                                         or DM on <a href="https://www.instagram.com/grmcutz/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition-colors">Instagram</a>
                                     </p>
                                 </div>

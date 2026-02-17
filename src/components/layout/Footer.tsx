@@ -75,7 +75,7 @@ export function Footer() {
                                 <div className="mt-3 pt-3 border-t border-white/5">
                                     <p className="text-[10px] uppercase tracking-widest text-primary font-bold mb-1">After Hour Cuts</p>
                                     <p className="text-[11px] text-gray-400">
-                                        Text 571-564-4461 or DM on Instagram
+                                        Text (571)-564-4461 or DM on Instagram
                                     </p>
                                 </div>
                             </div>
