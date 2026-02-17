@@ -29,10 +29,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/hero.png",
-        width: 1200,
-        height: 630,
-        alt: "GRMCUTS Barber Shop",
+        url: "/images/og-banner.png",
+        width: 1024,
+        height: 1024,
+        alt: "GRMCUTS",
       },
     ],
   },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "GRMCUTS",
     description: "Sharp cuts. Clean finish. Book now.",
-    images: ["/images/hero.png"],
+    images: ["/images/og-banner.png"],
   },
 };
 
