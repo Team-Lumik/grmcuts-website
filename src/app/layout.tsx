@@ -17,14 +17,14 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "GrmCutz | Luxury Barbering Studio",
+  title: "GRMCUTS",
   description: "Book your next haircut with GrmCutz. Expert fades, tapers, and grooming inside JazCutz, Manassas. Sharp cuts, chill atmosphere.",
   keywords: ["Manassas Barber", "DMV Barber", "Barber Shop Manassas", "GrmCutz", "Fades", "Tapers", "Mens Grooming"],
   openGraph: {
-    title: "GrmCutz | Premium Barber in Manassas, VA",
+    title: "GRMCUTS",
     description: "Sharp cuts. Clean finish. Book your appointment today.",
     url: "https://grmcutz.com",
-    siteName: "GrmCutz",
+    siteName: "GRMCUTS",
     locale: "en_US",
     type: "website",
     images: [
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
         url: "/images/hero.png",
         width: 1200,
         height: 630,
-        alt: "GrmCutz Barber Shop",
+        alt: "GRMCUTS Barber Shop",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "GrmCutz | Premium Barber in Manassas, VA",
+    title: "GRMCUTS",
     description: "Sharp cuts. Clean finish. Book now.",
     images: ["/images/hero.png"],
   },
