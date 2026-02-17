@@ -59,6 +59,10 @@ export default async function ServicesPage() {
                     </div>
                 ))}
             </div>
+
+            <div className={styles.notice}>
+                <p>* Eyebrows, designs, and enhancements are always free</p>
+            </div>
         </div>
     )
 }

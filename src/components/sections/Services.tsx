@@ -31,8 +31,8 @@ export function Services() {
                 </div>
 
                 <div className="mt-20 text-center md:text-left">
-                    <p className="text-white/40 text-xs uppercase tracking-widest">
-                        * Prices may vary based on complexity.
+                    <p className="text-primary text-sm uppercase tracking-widest font-bold bg-white/5 py-3 px-6 rounded-lg inline-block border border-primary/20">
+                        * Eyebrows, designs, and enhancements are always free
                     </p>
                 </div>
             </div>

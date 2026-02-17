@@ -119,3 +119,22 @@
 .button:hover {
     opacity: 0.9;
 }
+
+.notice {
+    margin-top: 4rem;
+    padding-bottom: 6rem;
+    text-align: center;
+}
+
+.notice p {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid rgba(var(--primary-rgb), 0.2);
+}
