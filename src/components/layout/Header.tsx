@@ -23,24 +23,24 @@ export function Header() {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${scrolled || isOpen
-                ? 'bg-black/95 backdrop-blur-md border-white/5 py-10'
-                : 'bg-transparent border-transparent py-18 md:py-24'
+                ? 'bg-black/95 backdrop-blur-md border-white/5 py-12'
+                : 'bg-transparent border-transparent py-20 lg:py-32'
                 }`}
         >
             <div className="container mx-auto px-6 md:px-12">
-                <div className="flex items-center justify-between">
-                    <Link href="/" className="relative w-[312px] h-[104px] md:w-[416px] md:h-[146px] transition-transform hover:scale-105 active:scale-95">
+                <div className="flex items-center justify-between gap-8">
+                    <Link href="/" className="relative w-[360px] h-[120px] lg:w-[540px] lg:h-[190px] transition-transform hover:scale-105 active:scale-95 flex-shrink-0">
                         <Image
                             src="/images/logo-transparent.png"
                             alt="GrmCutz Logo"
                             fill
-                            className="object-contain object-left"
+                            className="object-contain"
                             priority
                         />
                     </Link>
 
                     {/* Desktop Nav */}
-                    <nav className="hidden md:flex items-center gap-10">
+                    <nav className="hidden lg:flex items-center gap-10">
                         <Link href="#gallery" className="text-sm font-medium text-gray-400 hover:text-white transition-colors tracking-widest uppercase">Gallery</Link>
                         <Link href="#services" className="text-sm font-medium text-gray-400 hover:text-white transition-colors tracking-widest uppercase">Services</Link>
                         <Link href="#reviews" className="text-sm font-medium text-gray-400 hover:text-white transition-colors tracking-widest uppercase">Reviews</Link>
@@ -64,7 +64,7 @@ export function Header() {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
+                        className="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
                         onClick={toggleMenu}
                         aria-label="Toggle menu"
                     >
@@ -75,7 +75,7 @@ export function Header() {
 
             {/* Mobile Nav */}
             {isOpen && (
-                <div className="md:hidden absolute top-full left-0 right-0 bg-black/95 border-b border-white/10 p-4 animate-in slide-in-from-top-2">
+                <div className="lg:hidden absolute top-full left-0 right-0 bg-black/95 border-b border-white/10 p-4 animate-in slide-in-from-top-2">
                     <div className="flex flex-col gap-4">
                         <Link href="#gallery" className="text-lg font-medium text-gray-300 hover:text-white" onClick={toggleMenu}>Gallery</Link>
                         <Link href="#services" className="text-lg font-medium text-gray-300 hover:text-white" onClick={toggleMenu}>Services</Link>
