@@ -23,13 +23,13 @@ export function Header() {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${scrolled || isOpen
-                ? 'bg-black/95 backdrop-blur-md border-white/5 py-12'
-                : 'bg-transparent border-transparent py-20 lg:py-32'
+                ? 'bg-black/95 backdrop-blur-md border-white/5 py-4 lg:py-8'
+                : 'bg-transparent border-transparent py-8 lg:py-20'
                 }`}
         >
             <div className="container mx-auto px-6 md:px-12">
                 <div className="flex items-center justify-between gap-8">
-                    <Link href="/" className="relative w-[360px] h-[120px] lg:w-[540px] lg:h-[190px] transition-transform hover:scale-105 active:scale-95 flex-shrink-0">
+                    <Link href="/" className="relative w-[280px] h-[80px] lg:w-[540px] lg:h-[190px] transition-transform hover:scale-105 active:scale-95 flex-shrink-0">
                         <Image
                             src="/images/logo-transparent.png"
                             alt="GrmCutz Logo"
