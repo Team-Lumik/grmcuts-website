@@ -21,7 +21,7 @@ export function Button({
     const baseStyles = "relative inline-flex items-center justify-center px-8 py-4 text-sm uppercase tracking-[0.2em] font-medium transition-all duration-300 active:scale-95 overflow-hidden group";
 
     const variants = {
-        primary: "bg-primary text-white hover:bg-[#7a0000] hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(139,0,0,0.4)] md:font-semibold",
+        primary: "bg-primary text-white hover:bg-[#991b1b] hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(185,28,28,0.4)] md:font-semibold",
         outline: "border border-white/10 text-white hover:bg-white/5 hover:border-white/20"
     };
 
