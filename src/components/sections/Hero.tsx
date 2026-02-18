@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { Button } from '@/components/ui/Button'
+
 
 export function Hero() {
     return (
@@ -52,20 +54,20 @@ export function Hero() {
                     </p>
 
                     {/* CTAs */}
-                    <div className="flex flex-col md:flex-row items-center gap-6 mt-8 w-full md:w-auto">
-                        <a
+                    <div className="flex flex-col md:flex-row items-center gap-6 mt-10 w-full md:w-auto">
+                        <Button
                             href="https://booksy.com/en-us/1437938_grmcuts_barber-shop_38420_manassas#ba_s=seo"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-full md:w-auto min-w-[200px] px-8 py-4 bg-primary text-white text-sm uppercase tracking-widest font-bold hover:bg-red-700 transition-all duration-300 shadow-[0_0_20px_rgba(210,43,43,0.3)] hover:shadow-[0_0_30px_rgba(210,43,43,0.5)]"
+                            external
+                            className="w-full md:w-auto min-w-[220px]"
                         >
                             Book Appointment
-                        </a>
+                        </Button>
                         <Link
                             href="#gallery"
-                            className="text-white/70 hover:text-white text-sm uppercase tracking-widest border-b border-white/20 hover:border-white transition-all pb-1"
+                            className="text-white/60 hover:text-white text-xs uppercase tracking-[0.2em] font-medium transition-all group"
                         >
                             View Portfolio
+                            <span className="block h-px w-0 group-hover:w-full bg-white/40 transition-all duration-300"></span>
                         </Link>
                     </div>
                 </div>

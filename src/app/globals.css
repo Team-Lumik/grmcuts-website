@@ -36,6 +36,18 @@
       transform: scale(1.1);
     }
   }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(calc(-50% - 12px));
+    }
+  }
+
+  --animate-scroll: scroll 40s linear infinite;
 }
 
 /* Base Styles */

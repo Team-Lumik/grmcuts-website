@@ -13,11 +13,14 @@ export function Services() {
                     <h2 className="font-serif text-4xl md:text-6xl font-bold text-foreground tracking-tighter uppercase">Services</h2>
                 </div>
 
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-2">
                     {services.map((service, index) => (
-                        <div
+                        <a
                             key={index}
-                            className="group flex flex-col md:flex-row md:items-baseline justify-between py-8 border-b border-border hover:border-primary/50 transition-colors"
+                            href="https://booksy.com/en-us/1437938_grmcuts_barber-shop_38420_manassas#ba_s=seo"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex flex-col md:flex-row md:items-baseline justify-between p-8 border border-white/5 hover:border-primary/30 hover:bg-white/[0.02] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] active:scale-[0.98]"
                         >
                             <div className="mb-2 md:mb-0">
                                 <h3 className="font-serif text-3xl md:text-4xl text-foreground group-hover:text-primary transition-colors duration-300">{service.name}</h3>
@@ -26,7 +29,7 @@ export function Services() {
                                 <span className="text-sm text-muted-foreground font-mono uppercase tracking-wider">{service.duration}</span>
                                 <span className="text-xl md:text-2xl font-bold text-primary">{service.price}</span>
                             </div>
-                        </div>
+                        </a>
                     ))}
                 </div>
 

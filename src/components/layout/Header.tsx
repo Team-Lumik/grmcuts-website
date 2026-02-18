@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X, Instagram } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import { Button } from '@/components/ui/Button'
 
 export function Header() {
     const [isOpen, setIsOpen] = useState(false)
@@ -22,13 +23,13 @@ export function Header() {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${scrolled || isOpen
-                ? 'bg-black/95 backdrop-blur-md border-white/5 py-4'
-                : 'bg-transparent border-transparent py-6 md:py-8'
+                ? 'bg-black/95 backdrop-blur-md border-white/5 py-5'
+                : 'bg-transparent border-transparent py-8 md:py-10'
                 }`}
         >
             <div className="container mx-auto px-6 md:px-12">
                 <div className="flex items-center justify-between">
-                    <Link href="/" className="relative w-32 h-12 md:w-40 md:h-14 transition-transform hover:scale-105">
+                    <Link href="/" className="relative w-40 h-14 md:w-52 md:h-18 transition-transform hover:scale-105 active:scale-95">
                         <Image
                             src="/images/logo-transparent.png"
                             alt="GrmCutz Logo"
@@ -39,27 +40,26 @@ export function Header() {
                     </Link>
 
                     {/* Desktop Nav */}
-                    <nav className="hidden md:flex items-center gap-8">
-                        <Link href="#gallery" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Gallery</Link>
-                        <Link href="#services" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Services</Link>
-                        <Link href="#reviews" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Reviews</Link>
-                        <div className="h-4 w-px bg-white/10"></div>
+                    <nav className="hidden md:flex items-center gap-10">
+                        <Link href="#gallery" className="text-sm font-medium text-gray-400 hover:text-white transition-colors tracking-widest uppercase">Gallery</Link>
+                        <Link href="#services" className="text-sm font-medium text-gray-400 hover:text-white transition-colors tracking-widest uppercase">Services</Link>
+                        <Link href="#reviews" className="text-sm font-medium text-gray-400 hover:text-white transition-colors tracking-widest uppercase">Reviews</Link>
+                        <div className="h-4 w-px bg-white/10 mx-2"></div>
                         <a
                             href="https://www.instagram.com/grmcutz/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-300 hover:text-white transition-colors"
+                            className="text-gray-400 hover:text-white transition-colors"
                         >
                             <Instagram size={20} />
                         </a>
-                        <a
+                        <Button
                             href="https://booksy.com/en-us/1437938_grmcuts_barber-shop_38420_manassas#ba_s=seo"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-gray-200 transition-colors"
+                            external
+                            className="px-6 py-2.5 text-xs"
                         >
                             Book Now
-                        </a>
+                        </Button>
                     </nav>
 
                     {/* Mobile Menu Button */}
@@ -88,15 +88,14 @@ export function Header() {
                         >
                             <Instagram size={20} /> Instagram
                         </a>
-                        <a
+                        <Button
                             href="https://booksy.com/en-us/1437938_grmcuts_barber-shop_38420_manassas#ba_s=seo"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-primary text-black text-center py-3 rounded-lg font-bold hover:bg-primary/90 transition-colors"
+                            external
+                            className="w-full py-4 text-sm"
                             onClick={toggleMenu}
                         >
                             Book Now
-                        </a>
+                        </Button>
                     </div>
                 </div>
             )}

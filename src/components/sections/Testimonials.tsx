@@ -24,33 +24,47 @@ export function Testimonials() {
         }
     ]
 
-    return (
-        <section id="reviews" className="py-20 bg-secondary/20 relative overflow-hidden">
-            {/* Background decoration */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+    // Double the reviews for infinite scroll
+    const scrollingReviews = [...reviews, ...reviews]
 
-            <div className="container mx-auto px-4 relative z-10">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Client Love</h2>
-                    <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+    return (
+        <section id="reviews" className="py-24 bg-secondary/20 relative overflow-hidden border-t border-white/5">
+            {/* Background decoration */}
+            <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2"></div>
+
+            <div className="relative z-10">
+                <div className="text-center mb-20">
+                    <span className="text-sm uppercase tracking-[0.3em] text-primary block mb-4 font-bold">Client Love</span>
+                    <h2 className="font-serif text-4xl md:text-5xl font-bold text-white tracking-tight uppercase">Testimonials</h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                    {reviews.map((review, index) => (
-                        <div key={index} className="bg-black/40 backdrop-blur-sm border border-white/5 p-8 rounded-2xl shadow-lg hover:shadow-primary/5 transition-all">
-                            <div className="flex gap-1 text-primary mb-4">
-                                {[...Array(5)].map((_, i) => (
-                                    <Star key={i} size={16} fill="currentColor" />
-                                ))}
+                {/* Infinite Carousel Container */}
+                <div className="flex overflow-hidden group">
+                    <div className="flex gap-6 animate-scroll hover:[animation-play-state:paused] py-4">
+                        {scrollingReviews.map((review, index) => (
+                            <div
+                                key={index}
+                                className="flex-shrink-0 w-[350px] md:w-[450px] bg-black/40 backdrop-blur-md border border-white/5 p-10 rounded-xl shadow-2xl transition-all duration-500 hover:border-primary/20 hover:bg-black/60"
+                            >
+                                <div className="flex gap-1 text-primary mb-6">
+                                    {[...Array(5)].map((_, i) => (
+                                        <Star key={i} size={14} fill="currentColor" />
+                                    ))}
+                                </div>
+                                <p className="text-gray-300 mb-8 leading-relaxed italic text-lg">&ldquo;{review.text}&rdquo;</p>
+                                <div className="flex items-center justify-between border-t border-white/5 pt-6">
+                                    <div className="flex flex-col">
+                                        <span className="font-bold text-white tracking-wide">{review.name}</span>
+                                        <span className="text-xs text-gray-500 uppercase tracking-widest mt-1">{review.date}</span>
+                                    </div>
+                                    <div className="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center">
+                                        <span className="text-[10px] text-primary font-bold">G</span>
+                                    </div>
+                                </div>
                             </div>
-                            <p className="text-gray-300 mb-6 leading-relaxed italic">&ldquo;{review.text}&rdquo;</p>
-                            <div className="flex items-center justify-between border-t border-white/5 pt-4">
-                                <span className="font-bold text-white">{review.name}</span>
-                                <span className="text-sm text-gray-500">{review.date}</span>
-                            </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

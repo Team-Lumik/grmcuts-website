@@ -1,4 +1,6 @@
 import { Calendar } from 'lucide-react'
+import { Button } from '@/components/ui/Button'
+
 
 export function BookingCTA() {
     return (
@@ -19,15 +21,14 @@ export function BookingCTA() {
                     Choose your service → pick a time → you’re set.
                 </p>
 
-                <a
+                <Button
                     href="https://booksy.com/en-us/1437938_grmcuts_barber-shop_38420_manassas#ba_s=seo"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-black rounded-full font-bold text-lg hover:bg-primary/90 transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+                    external
+                    className="gap-2 px-10 py-5 text-lg"
                 >
                     <Calendar size={20} />
                     BOOK NOW
-                </a>
+                </Button>
             </div>
         </section>
     )
