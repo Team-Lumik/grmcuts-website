@@ -13,9 +13,8 @@ interface ServiceItem {
 
 // Fallback data if DB is empty (since seeding failed)
 const FALLBACK_SERVICES = [
-    { id: '1', name: 'Any Haircut', price: 25.00, duration: 45, description: 'Clean haircut (low, mid, high) with lineup.' },
-    { id: '2', name: 'Any Haircut/Beard', price: 30.00, duration: 50, description: 'Full haircut combined with beard shaping and trim.' },
-    { id: '3', name: 'Shape Up', price: 20.00, duration: 20, description: 'Crisp lineup around the hairline and beard.' },
+    { id: '1', name: 'Any Haircut', price: 35.00, duration: 45, description: 'Clean haircut (low, mid, high) with lineup.' },
+    { id: '2', name: 'Any Haircut/Beard', price: 40.00, duration: 50, description: 'Full haircut combined with beard shaping and trim.' },
 ]
 
 async function getServices(): Promise<ServiceItem[]> {

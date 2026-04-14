@@ -1,8 +1,7 @@
 export function Services() {
     const services = [
-        { name: "Any Haircut", price: "$25.00", duration: "45min" },
-        { name: "Any Haircut/Beard", price: "$30.00", duration: "50min" },
-        { name: "Shape Up", price: "$20.00", duration: "20min" },
+        { name: "Any Haircut", price: "$35.00", duration: "45min" },
+        { name: "Any Haircut/Beard", price: "$40.00", duration: "50min" },
     ]
 
     return (

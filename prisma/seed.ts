@@ -21,12 +21,8 @@ async function main() {
 
     // Create Services
     const services = [
-        { name: 'Fade', price: 35.00, duration: 45, description: 'Clean fade (low, mid, high) with lineup.' },
-        { name: 'Taper', price: 30.00, duration: 30, description: 'Classic taper cut for a sharp look.' },
-        { name: 'Lineup', price: 15.00, duration: 15, description: 'Crisp lineup around the hairline and beard.' },
-        { name: 'Beard Trim', price: 20.00, duration: 30, description: 'Sculpting and trimming the beard with razor finish.' },
-        { name: 'Full Service', price: 60.00, duration: 75, description: 'Haircut + Beard Trim + Hot Towel.' },
-        { name: 'Kids Cut', price: 25.00, duration: 30, description: 'For styling young gents under 12.' },
+        { name: 'Any Haircut', price: 35.00, duration: 45, description: 'Clean haircut (low, mid, high) with lineup.' },
+        { name: 'Any Haircut/Beard', price: 40.00, duration: 50, description: 'Full haircut combined with beard shaping and trim.' },
     ]
 
     for (const s of services) {
