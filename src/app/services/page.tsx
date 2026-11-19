@@ -1,4 +1,3 @@
-import prisma from '@/lib/prisma'
 import Link from 'next/link'
 import styles from './page.module.css'
 import { Check } from 'lucide-react'
@@ -11,24 +10,13 @@ interface ServiceItem {
     description: string | null
 }
 
-// Fallback data if DB is empty (since seeding failed)
-const FALLBACK_SERVICES = [
+const SERVICES: ServiceItem[] = [
     { id: '1', name: 'Any Haircut', price: 35.00, duration: 45, description: 'Clean haircut (low, mid, high) with lineup.' },
     { id: '2', name: 'Any Haircut/Beard', price: 40.00, duration: 50, description: 'Full haircut combined with beard shaping and trim.' },
 ]
 
-async function getServices(): Promise<ServiceItem[]> {
-    try {
-        const services = await prisma.service.findMany()
-        return services.length > 0 ? services : FALLBACK_SERVICES
-    } catch (e) {
-        console.error("Database connection failed, using fallback:", e)
-        return FALLBACK_SERVICES
-    }
-}
-
-export default async function ServicesPage() {
-    const services = await getServices()
+export default function ServicesPage() {
+    const services = SERVICES
 
     return (
         <div className="container">
